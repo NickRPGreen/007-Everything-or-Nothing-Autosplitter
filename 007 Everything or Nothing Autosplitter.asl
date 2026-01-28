@@ -1,5 +1,6 @@
-//007 James Bond Everything or Nothing Autosplitter
-//Created by NickRPGreen 
+// 007 James Bond Everything or Nothing Autosplitter
+// For Dolphin & Retroarch - requires emu-helper-v3
+// Created by NickRPGreen 
 
 state("LiveSplit") {}
 
@@ -54,4 +55,8 @@ split {
         // Check if midsplits logic has triggered at the start of the level
         else if(vars.Level.Current > 0 && vars.Level.Old == 0 && settings["midsplits"]) vars.inLevel = true;
     }
+}
+
+shutdown {
+    vars.Helper.Dispose();
 }
