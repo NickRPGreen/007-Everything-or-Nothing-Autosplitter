@@ -18,7 +18,7 @@ startup {
 }
 
 start {
-    return vars.GameState.Current == 5 && vars.GameState.Old == 3; 
+    return vars.GameState.Current == 5 && (vars.GameState.Old == 2 || vars.GameState.Old == 3); 
 }
 
 onStart {
@@ -60,3 +60,4 @@ split {
 shutdown {
     vars.Helper.Dispose();
 }
+
